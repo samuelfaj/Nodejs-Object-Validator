@@ -1,7 +1,6 @@
-'use strict';
 const moment = require('moment');
 /*
-rules = [
+rules = {
     id_user: {
         name: 'user id' ,
         type: 'number'  ,
@@ -32,7 +31,7 @@ rules = [
         format: 'YYYY-MM-DD'  ,
         required: false
     }
-]
+}
 */
 
 const messages = {
@@ -58,28 +57,22 @@ const messages = {
     }
 };
 
-module.exports.post_validator = function (rules,posts) {
-    const self  = this;
+module.exports = function (rules,posts) {
+    let self  = this;
     const idiom = 'pt';
 
     this.rule   = {};
     this.post   = {};
     this.result = {result: true, message: ''};
 
-    for (let key in rules) {
-        self.rule = rules[key];
-        self.post = posts[key];
-
-        let validate = self.validate.init();
-        if(!validate.result){ self.result = validate; }
-    }
-
     this.validate = {
         init:   function () {
-            if(!'name'     in self.rule) self.rule['name']     = '';
-            if(!'type'     in self.rule) self.rule['type']     = 'string';
-            if(!'empty'    in self.rule) self.rule['empty']    = false;
-            if(!'required' in self.rule) self.rule['required'] = true;
+            if(!('name'     in self.rule)) self.rule['name']     = '';
+            if(!('type'     in self.rule)) self.rule['type']     = 'string';
+            if(!('empty'    in self.rule)) self.rule['empty']    = false;
+            if(!('required' in self.rule)) self.rule['required'] = true;
+
+            console.log(self.rule);
 
             if((typeof self.post === 'undefined' && self.rule['required'] === true) || (self.post.length === 0 && self.rule['empty'] !== true)){
                 return self.return.error('required', '[%1]', self.rule['name']);
@@ -138,22 +131,7 @@ module.exports.post_validator = function (rules,posts) {
             return self.return.success();
         } ,
     };
-
-    this.return  = {
-        error: function(message, find, replace) {
-            return {
-                result: false,
-                message: (self.rule['error_message'] !== false) ? self.message(messages[self.idiom][message], find, replace) : ''
-            };
-        },
-        success: function() {
-            return {
-                result: true,
-                message: ''
-            };
-        }
-    };
-    this.message = function(message, find, replace){
+    this.message  = function(message, find, replace){
         if(typeof find    === 'string') find    = [find];
         if(typeof replace === 'string') replace = [replace];
 
@@ -163,6 +141,28 @@ module.exports.post_validator = function (rules,posts) {
 
         return message;
     };
+    this.return   = {
+        error: function(message, find, replace) {
+            return {
+                result: false,
+                message: (self.rule['error_message'] !== false) ? self.message(messages[idiom][message], find, replace) : ''
+            };
+        },
+        success: function() {
+            return {
+                result: true,
+                message: ''
+            };
+        }
+    };
+
+    for (let key in rules) {
+        self.rule = (typeof rules[key] === 'string') ? {} : rules[key];
+        self.post = posts[key];
+
+        let validate = self.validate.init();
+        if(!validate.result){ self.result = validate; }
+    }
 
     return self.result;
 };
