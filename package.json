@@ -1,0 +1,27 @@
+{
+  "name": "obj-validator",
+  "version": "1.0.0",
+  "description": "This module helps you to validate objects. Like POSTs received by HTTP or a JSON.",
+  "main": "validator.js",
+  "dependencies": {
+    "moment": "^2.21.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuelfaj/Nodejs-Object-Validator.git"
+  },
+  "keywords": [
+    "object",
+    "validator"
+  ],
+  "author": "Samuel Fajreldines",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samuelfaj/Nodejs-PostValidator/issues"
+  },
+  "homepage": "https://github.com/samuelfaj/Nodejs-PostValidator#readme"
+}

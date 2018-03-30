@@ -1,6 +1,16 @@
-const moment = require('moment');
 /*
-rules = {
+
+Node.js - Object Validator.
+    Created by Samuel Fajreldines
+
+ -> Objective: This module helps you to validate objects.
+ -> Messages: You can edit the messages in messages.json.
+ -> Test: You can test this module with the file test.js.
+
+--
+Example of
+
+let rules = {
     id_user: {
         name: 'user id' ,
         type: 'number'  ,
@@ -34,30 +44,10 @@ rules = {
 }
 */
 
-const messages = {
-    pt: {
-        type: "O item [%1] precisa ser válido e do tipo [%2].",
-        required: "O item [%1] deve ser preenchido.",
-        /* type - string */
-        min_letters: "O item [%1] deve ter no mínimo [%2] caracteres.",
-        max_letters: "O item [%1] deve ter no máximo [%2] caracteres.",
-        /* type - number */
-        min: "O item [%1] deve ser maior que [%2].",
-        max: "O item [%1] deve ser menor que [%2].",
-    },
-    en: {
-        type: "The item [%1] must be valid and of [%2] type.",
-        required: "the item [%1] must be filled in.",
-        /* type - string */
-        min_letters: "The item [%1] must be at least [%2] characters.",
-        max_letters: "The item [% 1] must be at most [% 2] characters.",
-        /* type - number */
-        min: "The item [%1] must be bigger than [%2].",
-        max: "The item [%1] must be smaller than [%2].",
-    }
-};
+const moment   = require('moment');
+const messages = require('./messages');
 
-module.exports = function (rules,posts) {
+module.exports.validator = function (rules,posts) {
     let self  = this;
     const idiom = 'pt';
 
@@ -72,8 +62,6 @@ module.exports = function (rules,posts) {
             if(!('empty'    in self.rule)) self.rule['empty']    = false;
             if(!('required' in self.rule)) self.rule['required'] = true;
 
-            console.log(self.rule);
-
             if((typeof self.post === 'undefined' && self.rule['required'] === true) || (self.post.length === 0 && self.rule['empty'] !== true)){
                 return self.return.error('required', '[%1]', self.rule['name']);
             }
@@ -85,8 +73,8 @@ module.exports = function (rules,posts) {
         date:   function () {
             if(!'format' in self.rule){ self.rule['format'] = 'YYYY-MM-DD H:i:s'; }
 
-            if(!moment(self.post,self.rule['format']).isValid()){
-                return self.return.error('type', ['[%1]','[%2]'], [self.rule['name'], 'date']);
+            if(!moment(self.post, self.rule.format, true).isValid()){
+                return self.return.error('type', ['[%1]','[%2]'], [self.rule['name'], 'date (' + self.rule['format'] + ')']);
             }
 
             return self.return.success();
@@ -159,6 +147,8 @@ module.exports = function (rules,posts) {
     for (let key in rules) {
         self.rule = (typeof rules[key] === 'string') ? {} : rules[key];
         self.post = posts[key];
+
+        if(!(key in posts)) continue;
 
         let validate = self.validate.init();
         if(!validate.result){ self.result = validate; }

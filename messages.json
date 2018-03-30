@@ -1,0 +1,18 @@
+{
+  "pt": {
+    "type": "O item [%1] precisa ser válido e do tipo [%2].",
+    "required": "O item [%1] deve ser preenchido.",
+    "min_letters": "O item [%1] deve ter no mínimo [%2] caracteres.",
+    "max_letters": "O item [%1] deve ter no máximo [%2] caracteres.",
+    "min": "O item [%1] deve ser maior que [%2].",
+    "max": "O item [%1] deve ser menor que [%2]."
+  },
+  "en": {
+    "type": "The item [%1] must be valid and of [%2] type.",
+    "required": "the item [%1] must be filled in.",
+    "min_letters": "The item [%1] must be at least [%2] characters.",
+    "max_letters": "The item [% 1] must be at most [% 2] characters.",
+    "min": "The item [%1] must be bigger than [%2].",
+    "max": "The item [%1] must be smaller than [%2]."
+  }
+}
