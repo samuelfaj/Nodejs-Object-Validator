@@ -1,7 +1,7 @@
 const validator = require('./validator');
 
 console.log(
-    validator.validator(
+    validator.validate(
         {
             id_user: {
                 name: 'user id' ,

@@ -47,7 +47,7 @@ let rules = {
 const moment   = require('moment');
 const messages = require('./messages');
 
-module.exports.validator = function (rules,posts) {
+module.exports.validate = function (rules,posts) {
     let self  = this;
     const idiom = 'pt';
 
