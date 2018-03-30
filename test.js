@@ -1,4 +1,4 @@
-const validator = require('./validator');
+const validator = require('./obj-validator');
 
 console.log(
     validator.validate(

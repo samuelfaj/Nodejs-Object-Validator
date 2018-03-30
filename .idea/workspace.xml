@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c69210ab-6bbf-4cae-8d66-490e8d047fca" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/obj-validator.js" afterPath="$PROJECT_DIR$/obj-validator.js" />
       <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change beforePath="$PROJECT_DIR$/test.js" afterPath="$PROJECT_DIR$/test.js" />
@@ -22,8 +21,8 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            <state relative-caret-position="120">
+              <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -32,8 +31,8 @@
       <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+            <state relative-caret-position="0">
+              <caret line="0" column="42" lean-forward="false" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -42,10 +41,15 @@
       <file leaf-file-name="obj-validator.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/obj-validator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="49" column="23" lean-forward="false" selection-start-line="49" selection-start-column="15" selection-end-line="49" selection-end-column="23" />
+            <state relative-caret-position="185">
+              <caret line="141" column="27" lean-forward="true" selection-start-line="141" selection-start-column="27" selection-end-line="141" selection-end-column="27" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <element signature="e#1275#2030#0" expanded="false" />
+                <element signature="e#2061#2410#0" expanded="false" />
+                <element signature="e#2441#3246#0" expanded="false" />
+                <element signature="e#3277#3896#0" expanded="false" />
+                <element signature="e#3927#4592#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -73,9 +77,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>post</find>
+      <find>validate</find>
     </findStrings>
     <replaceStrings>
       <replace>obj</replace>
+      <replace>_validate</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -102,6 +108,7 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="1280" />
     <option name="width" value="1280" />
     <option name="height" value="999" />
   </component>
@@ -167,15 +174,15 @@
       <updated>1522296409370</updated>
       <workItem from="1522296410447" duration="712000" />
       <workItem from="1522367018674" duration="10000" />
-      <workItem from="1522384886924" duration="1331000" />
+      <workItem from="1522384886924" duration="1865000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2053000" />
+    <option name="totallyTimeSpent" value="2587000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="999" extended-state="0" />
+    <frame x="1280" y="0" width="1280" height="999" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -275,26 +282,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/obj-validator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="49" column="23" lean-forward="false" selection-start-line="49" selection-start-column="15" selection-end-line="49" selection-end-column="23" />
+        <state relative-caret-position="185">
+          <caret line="141" column="27" lean-forward="true" selection-start-line="141" selection-start-column="27" selection-end-line="141" selection-end-column="27" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <element signature="e#1275#2030#0" expanded="false" />
+            <element signature="e#2061#2410#0" expanded="false" />
+            <element signature="e#2441#3246#0" expanded="false" />
+            <element signature="e#3277#3896#0" expanded="false" />
+            <element signature="e#3927#4592#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        <state relative-caret-position="0">
+          <caret line="0" column="42" lean-forward="false" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        <state relative-caret-position="120">
+          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
           <folding />
         </state>
       </provider>

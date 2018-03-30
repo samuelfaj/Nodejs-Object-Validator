@@ -55,7 +55,7 @@ module.exports.validate = function (rules,posts) {
     this.post   = {};
     this.result = {result: true, message: ''};
 
-    this.validate = {
+    this._validate = {
         init:   function () {
             if(!('name'     in self.rule)) self.rule['name']     = '';
             if(!('type'     in self.rule)) self.rule['type']     = 'string';
@@ -66,7 +66,7 @@ module.exports.validate = function (rules,posts) {
                 return self.return.error('required', '[%1]', self.rule['name']);
             }
 
-            if(self.rule['type'] in self.validate){ return self.validate[self.rule['type']](); }
+            if(self.rule['type'] in self._validate){ return self._validate[self.rule['type']](); }
 
             throw 'post_validator - ERROR - There aren\'t validations for type "'+ self.rule['type'] +'"';
         } ,
@@ -150,8 +150,8 @@ module.exports.validate = function (rules,posts) {
 
         if(!(key in posts)) continue;
 
-        let validate = self.validate.init();
-        if(!validate.result){ self.result = validate; }
+        let _validate = self._validate.init();
+        if(!_validate.result){ self.result = _validate; }
     }
 
     return self.result;
