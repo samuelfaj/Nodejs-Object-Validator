@@ -62,7 +62,11 @@ module.exports.validate = function (rules,posts) {
             if(!('empty'    in self.rule)) self.rule['empty']    = false;
             if(!('required' in self.rule)) self.rule['required'] = true;
 
-            if((typeof self.post === 'undefined' && self.rule['required'] === true) || (self.post.length === 0 && self.rule['empty'] !== true)){
+            if(typeof self.post === 'undefined' && self.rule['required'] === true){
+                return self.return.error('required', '[%1]', self.rule['name']);
+            }
+
+            if(self.post.length === 0 && self.rule['empty'] !== true){
                 return self.return.error('required', '[%1]', self.rule['name']);
             }
 
@@ -147,8 +151,6 @@ module.exports.validate = function (rules,posts) {
     for (let key in rules) {
         self.rule = (typeof rules[key] === 'string') ? {} : rules[key];
         self.post = posts[key];
-
-        if(!(key in posts)) continue;
 
         let _validate = self._validate.init();
         if(!_validate.result){ self.result = _validate; }
