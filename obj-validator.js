@@ -62,8 +62,12 @@ module.exports.validate = function (rules,posts) {
             if(!('empty'    in self.rule)) self.rule['empty']    = false;
             if(!('required' in self.rule)) self.rule['required'] = true;
 
-            if(typeof self.post === 'undefined' && self.rule['required'] === true){
-                return self.return.error('required', '[%1]', self.rule['name']);
+            if(typeof self.post === 'undefined'){
+                if(self.rule['required'] === true){
+                    return self.return.error('required', '[%1]', self.rule['name']);
+                }else{
+                    return self.return.success();
+                }
             }
 
             if(self.post.length === 0 && self.rule['empty'] !== true){
