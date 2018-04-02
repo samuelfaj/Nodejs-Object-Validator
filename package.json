@@ -1,6 +1,6 @@
 {
   "name": "obj-validator.js",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "This module helps you to validate objects. Like POSTs received by HTTP or a JSON.",
   "main": "obj-validator.js",
   "dependencies": {
