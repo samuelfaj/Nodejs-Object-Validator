@@ -107,7 +107,7 @@ module.exports.validate = function (rules,posts) {
             if(('min' in self.rule) && (parseFloat(self.post) < parseFloat(self.rule['min']))){
                 return self.return.error('min', ['[%1]','[%2]'], [self.rule['name'], self.rule['min']]);
             }
-            if(('max' in self.rule) && (parseFloat(self.post.length) > parseFloat(self.rule['max']))){
+            if(('max' in self.rule) && (parseFloat(self.post) > parseFloat(self.rule['max']))){
                 return self.return.error('max', ['[%1]','[%2]'], [self.rule['name'], self.rule['max']]);
             }
 
