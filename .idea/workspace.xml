@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c69210ab-6bbf-4cae-8d66-490e8d047fca" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/obj-validator.js" afterPath="$PROJECT_DIR$/obj-validator.js" />
       <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
@@ -41,13 +40,13 @@
       <file leaf-file-name="obj-validator.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/obj-validator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="109" column="89" lean-forward="true" selection-start-line="109" selection-start-column="89" selection-end-line="109" selection-end-column="89" />
+            <state relative-caret-position="309">
+              <caret line="106" column="30" lean-forward="true" selection-start-line="106" selection-start-column="30" selection-end-line="106" selection-end-column="30" />
               <folding>
                 <element signature="e#2280#2629#0" expanded="false" />
                 <element signature="e#2660#3465#0" expanded="false" />
-                <element signature="e#4194#4859#0" expanded="false" />
-                <element signature="e#5213#5607#0" expanded="false" />
+                <element signature="e#4202#4867#0" expanded="false" />
+                <element signature="e#5221#5615#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -175,12 +174,12 @@
       <workItem from="1522384886924" duration="2316000" />
       <workItem from="1522468560138" duration="61000" />
       <workItem from="1522558287818" duration="63000" />
-      <workItem from="1522630972550" duration="49000" />
+      <workItem from="1522630972550" duration="271000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3211000" />
+    <option name="totallyTimeSpent" value="3433000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="0" width="1280" height="999" extended-state="0" />
@@ -239,8 +238,8 @@
           <folding>
             <element signature="e#2280#2629#0" expanded="false" />
             <element signature="e#2660#3465#0" expanded="false" />
-            <element signature="e#4194#4859#0" expanded="false" />
-            <element signature="e#5213#5607#0" expanded="false" />
+            <element signature="e#4202#4867#0" expanded="false" />
+            <element signature="e#5221#5615#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -284,8 +283,8 @@
           <folding>
             <element signature="e#2280#2629#0" expanded="false" />
             <element signature="e#2660#3465#0" expanded="false" />
-            <element signature="e#4194#4859#0" expanded="false" />
-            <element signature="e#5213#5607#0" expanded="false" />
+            <element signature="e#4202#4867#0" expanded="false" />
+            <element signature="e#5221#5615#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -313,8 +312,8 @@
           <folding>
             <element signature="e#2280#2629#0" expanded="false" />
             <element signature="e#2660#3465#0" expanded="false" />
-            <element signature="e#4194#4859#0" expanded="false" />
-            <element signature="e#5213#5607#0" expanded="false" />
+            <element signature="e#4202#4867#0" expanded="false" />
+            <element signature="e#5221#5615#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -381,13 +380,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/obj-validator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="109" column="89" lean-forward="true" selection-start-line="109" selection-start-column="89" selection-end-line="109" selection-end-column="89" />
+        <state relative-caret-position="309">
+          <caret line="106" column="30" lean-forward="true" selection-start-line="106" selection-start-column="30" selection-end-line="106" selection-end-column="30" />
           <folding>
             <element signature="e#2280#2629#0" expanded="false" />
             <element signature="e#2660#3465#0" expanded="false" />
-            <element signature="e#4194#4859#0" expanded="false" />
-            <element signature="e#5213#5607#0" expanded="false" />
+            <element signature="e#4202#4867#0" expanded="false" />
+            <element signature="e#5221#5615#0" expanded="false" />
           </folding>
         </state>
       </provider>
